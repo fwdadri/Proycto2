@@ -3,9 +3,11 @@ let edad = document.getElementById("edad");
 let gmail = document.getElementById("gmail");
 let password = document.getElementById("password");
 
-let boton = document.getElementById("boton")
+let botonCrear = document.getElementById("botonCrear");
 
-boton.addEventListener("click", function () {
+let lista =[]
+
+botonCrear.addEventListener("click", function () {
 
     data = {
         nombre: nombre.value,
@@ -14,9 +16,18 @@ boton.addEventListener("click", function () {
         password: password.value,
     }
 
-    localStorage.setItem("crear", JSON.stringify(data));
-   
-    // crear = JSON.parse(localStorage.getItem("crear"))
-    alert(crear.password)
+    console.log(lista)
+    localStorage.setItem("usuario",JSON.stringify(lista))
 
-})
+    let usuario= localStorage.getItem("usuario")
+
+    console.log(usuario)
+
+});
+
+
+
+
+
+
+
