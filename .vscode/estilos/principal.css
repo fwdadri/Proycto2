@@ -1,14 +1,33 @@
 *{  margin: 0;
-    background-color: cornflowerblue;
+    color: aliceblue;
 }
+body{
+    background-color: rgb(167, 227, 255);
+
+}
+
 header{
     display: flex;
     min-height: 70px;
-    background-color: blueviolet;
+    background-color: rgb(121, 99, 51);
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
+#logo{
+    width: 150px;
+    margin-left: 20%;
+}
+button{
+    margin-left: 60%; 
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10%;
+    background-color: rgb(235, 198, 120);
+}
+
+
 nav > a{
     font-weight: 600;
     padding-right: 20px;
@@ -18,18 +37,11 @@ nav > a:hover{
     color: aliceblue;
 }
 
-@media (max-width: 700px){
-    header{
-        flex-direction: column;
-    }
-    nav{
-        padding: 10px 0px;
-    }
-}
 
 
 .contenido {
     display: grid;
+    border-color: 5px brown;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
@@ -38,22 +50,25 @@ nav > a:hover{
 
 .contenido1{
     padding: 5%;
-    background-color: blueviolet;
-    width: 430px;
+    background-color: rgb(121, 99, 51);
+    width: 300px;
     height: 600px;
+    margin-left: 10%;
+    border-radius: 3%;
+
 }
 
 .contenido2{
-    border: solid 3px blueviolet;
-    background-color: rgb(131, 170, 244);
-    width: 1000px;
-    height: 700px;
-    margin-right: 100px;
-
+    border: solid 3px rgb(121, 99, 51);
+    background-color: rgb(205, 233, 247);
+    width: 800px;
+    height: 650px;
+    margin-left; 0%;
+        border-radius: 5%;
 }
 
 .circulo{
-    border: solid 3px blueviolet;
+    background-color: rgb(224, 203, 157);
     height: 200px;
     width: 200px;
     border-radius: 100%;
