@@ -1,7 +1,5 @@
 *{
     margin: 0%;
-    padding: 0;
-    box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -20,7 +18,7 @@ body{
 #logo2{
     width: 180px;
     height: 180px;
-    margin-left: 20%;
+    margin-left: 22%;
 }
 
 .caja{
@@ -32,8 +30,8 @@ body{
    text-align: center;
    border-radius: 30%;
    padding: 2%;
-   margin-left: 35%;
-   margin-top: 10%;
+   margin-left: 38%;
+   margin-top: 12%;
 }
 
 .input-box > input {

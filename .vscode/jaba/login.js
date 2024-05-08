@@ -1,32 +1,35 @@
+
+
 let username = document.getElementById("username");
 let password = document.getElementById("password");
 
-let boton = document.getElementById("boton");
+let boton = document.getElementById("botonLogin");
 
-boton.addEventListener("click", function() {
 
-    data = {
-        username: username.value,
-        password: password.value
+function boton() {
+
+    if (username.value != "" && password.value !="" ) {
+    
+      registro = JSON.parse(localStorage.getItem("usuario"))
+    
+      console.log(usuario)
+
+      let encontrado = registro.find(usuario => usuario.correo == username.value && usuario.password == password.value)
+        if (encontrado) {
+            localStorage.setItem("usuario",JSON.stringify(encontrado))
+            alert ("registro encontrado")
+            window.location.href= "principal.html"
+        
+        }else{
+                alert ("no pude entrar")
+        }
+
+
+    }else{
+        alert ("campos incompletros")
     }
-    localStorage.setItem("login", JSON.stringify(data));
    
-    const registro = Array(JSON.parse(localStorage.getItem("crear"))) || [];
+           
+}  
 
-    // const valiUser = login.find(data => data.username == username)
-    const vali = registro.find(data => data.gmail == username.value && data.password == password.value);
-
-    if (vali) { 
-        // alert ("bienvenido" + vali.username)
-        window.location.href = "principal.html"
-        // alert(login.password)
-     }else{
-      
-
-        alert ('contraseña o user incorrecto')
-        return alert ('usuario o contraseña incorrecta')
-     }
-       
-
-})
 
