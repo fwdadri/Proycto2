@@ -10,7 +10,7 @@ salir.addEventListener('click', function() {
 
     alert('bye')
 
-    localStorage.removeItem('login')
+    localStorage.removeItem('principal.html')
 
     window.location.href = "login.html"
 })

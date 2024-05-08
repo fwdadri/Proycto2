@@ -3,6 +3,8 @@ let edad = document.getElementById("edad");
 let gmail = document.getElementById("gmail");
 let password = document.getElementById("password");
 
+let boton = document.getElementById("boton")
+
 boton.addEventListener("click", function () {
 
     data = {
