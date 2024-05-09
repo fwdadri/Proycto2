@@ -8,7 +8,7 @@ let botonCrear = document.getElementById("botonCrear");
 let lista =[]
 
 botonCrear.addEventListener("click", function () {
-
+    
     data = {
         nombre: nombre.value,
         edad: edad.value,
@@ -16,12 +16,13 @@ botonCrear.addEventListener("click", function () {
         password: password.value,
     }
 
-    console.log(lista)
-    localStorage.setItem("usuario",JSON.stringify(lista))
+    let usuario= JSON.parse(localStorage.getItem("usuario")) || [];
 
-    let usuario= localStorage.getItem("usuario")
+    usuario.push(data);
 
-    console.log(usuario)
+    localStorage.setItem("usuario",JSON.stringify(usuario))
+
+    
 
 });
 

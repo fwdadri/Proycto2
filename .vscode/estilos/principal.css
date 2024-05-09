@@ -83,7 +83,7 @@ nav > a:hover{
 .contenido2{
     display: flex;
     border: solid 3px rgb(121, 99, 51);
-    background-color: rgb(183, 235, 229);
+
     width: 1000px;
     height: 650px;
     margin-right: 70px ;
@@ -130,4 +130,19 @@ hr{
     display: flex;
     border-width: 5px;
     
+}
+
+table{
+    border: solid 3px rgb(121, 99, 51);
+    width: 960px;
+    height: 150px;
+    border-radius: 5%;
+    margin-left: 15px;
+    margin-top: 20px;
+
+}
+
+#scroll{
+    height: 70vh;
+    overflow-y: scroll;
 }
