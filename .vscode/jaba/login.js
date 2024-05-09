@@ -18,16 +18,21 @@ boton.addEventListener("click", function( ) {
                                       //es un key, puede tener cualquier key como index que recorre y es el que encuentra lo que queremos
            if (encontrado) {
                localStorage.setItem("usuario",JSON.stringify(encontrado))
-               alert ("registro encontrado")
+               alert ("bienvenido")
                window.location.href= "principal.html"
            
            }else{
-                   alert ("no puede entrar");
+                   alert ("contraseña o correo incorrecto");
            }
    
    
        }else{
-           alert ("campos incompletros")
+           alert ("campos incompletos")
        }
 }) 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function llamarTabla(params) {
+    
+}
