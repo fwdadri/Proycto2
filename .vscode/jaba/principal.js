@@ -17,23 +17,75 @@ salir.addEventListener('click', function() {
 
 //////////////////////////////////////////////////////////////////////////////
 
+var nombre = [],
+    src = [],
+
+    if (localStorage.getItem('cat') != null) {
+        nombre = JSON.parse(localStorage.getItem('cat'));
+        src = JSON.parse(localStorage.getItem('dog'));
+    }
+
+var elementoBtnRegistrar = document.querySelector('#btnGuardar');
+
+elementoBtnRegistrar.addEventListener('click, registrarLibros');
+
+function registarLibros() {
+
+    let  name = document.querySelector('#nombre').value,
+    let direccion = document.querySelector('#src').value,
+
+
+    nombre.push('name');
+    src.push('direccion');
+
+
+    localStorage.setItem('cat', JSON.stringify(nombre));
+    localStorage.setItem('dog', JSON.stringify(src));
 
 
 
-let guardar = document.getElementById("btnGuardar");
-
-
-guardar.addEventListener('click', function() {
-    alert("holi")
-    let nombre = document.getElementById("nombre")
-    let src = document.getElementById("src")
     
-   //trtando de generar filas
-    document.getElementById("cantidad").insertRow(-1).innerHTML = '<td></td><td></td><td></td><td></td><td></td><td></td>';
+}
 
-    document.getElementById("nombreAr").innerHTML = nombre.value
 
-    document.getElementById("nombreSrc").innerHTML = src.value
-})
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function llenarTablas() {
+    var tbody = document.querySelector('#tblLibros tbody');
+
+    tbody.innerHTML = "";
+
+    var aid = JSON.parse(localStorage.getItem('cat'));
+    var nom =  JSON.parse(localStorage.getItem('dog'));
+
+
+
+    var cantidadTablas = aid.length;
+
+
+    for(var i = 0; i < cantidadTablas; i++ ){
+
+        var fila = document.createElement('tr');
+
+        var celda1 = document.createElement('td');
+        var celda2 = document.createElement('td');
+
+        var nodotxt1 = document.createTextNode(aid [i]);
+        var nodotxt2 = document.createTextNode(nom [i]);
+
+        celda.appendChild(nodotxt1);
+        celda.appendChild(nodotxt2);
+        
+        fila.appendChild(celdaaid.appendChild(nodotxt));
+        fila.appendChild(celdaaid.appendChild(nodotxt2));
+
+        tbody.appendChild(fila)
+
+    }
+
+
+    
+}
 
