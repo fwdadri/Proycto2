@@ -3,33 +3,29 @@ let edad = document.getElementById("edad");
 let gmail = document.getElementById("gmail");
 let password = document.getElementById("password");
 
-let botonCrear = document.getElementById("botonCrear");
+let botonCrear = document.getElementById("crear");
 
-let lista =[];
 
-function registar() {
+let usuarios =[];
+botonCrear.addEventListener('click', function () {
+   
+   
+    if (nombre.value != "" &&  password.value != "" && gmail.value != "") {
 
-    if (nombree.value != "" &&  password.value !="" && gmail.value != "") {
-
-        data= {
+        let data= {
             nombre: nombre.value,
             edad: edad.value,
             gmail: gmail.value,
             password: password.value,
         }
-        usuario= JSON.parse(localStorage.getItem("usuario")) || [];
-        usuario.push(data);
 
-        localStorage.setItem("usuario",JSON.stringify(usuario))
-    
-        Window.location. href = "login.html"
-    
-    }else{
+        usuarios= JSON.parse(localStorage.getItem("crear")) || [];
+        usuarios.push(data)
 
-        alert ("no puede haber campos incompletos")
+        localStorage.setItem("crear",JSON.stringify(usuarios))
+    
     }
-    
-}
+});
     
 
 
