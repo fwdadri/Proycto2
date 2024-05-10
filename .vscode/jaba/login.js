@@ -30,9 +30,3 @@ boton.addEventListener("click", function( ) {
            alert ("campos incompletos")
        }
 }) 
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-function llamarTabla(params) {
-    
-}
