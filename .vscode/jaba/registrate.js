@@ -5,26 +5,32 @@ let password = document.getElementById("password");
 
 let botonCrear = document.getElementById("botonCrear");
 
-let lista =[]
+let lista =[];
 
-botonCrear.addEventListener("click", function () {
+function registar() {
+
+    if (nombree.value != "" &&  password.value !="" && gmail.value != "") {
+
+        data= {
+            nombre: nombre.value,
+            edad: edad.value,
+            gmail: gmail.value,
+            password: password.value,
+        }
+        usuario= JSON.parse(localStorage.getItem("usuario")) || [];
+        usuario.push(data);
+
+        localStorage.setItem("usuario",JSON.stringify(usuario))
     
-    data = {
-        nombre: nombre.value,
-        edad: edad.value,
-        gmail: gmail.value,
-        password: password.value,
+        Window.location. href = "login.html"
+    
+    }else{
+
+        alert ("no puede haber campos incompletos")
     }
-
-    let usuario= JSON.parse(localStorage.getItem("usuario")) || [];
-
-    usuario.push(data);
-
-    localStorage.setItem("usuario",JSON.stringify(usuario))
-
     
-
-});
+}
+    
 
 
 
