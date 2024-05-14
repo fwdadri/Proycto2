@@ -1,5 +1,5 @@
 *{  margin: 0;
-    color: aliceblue;
+
 }
 body{
     background-color: rgb(145, 234, 224);
@@ -7,6 +7,7 @@ body{
 }
 
 header{
+    color: aliceblue;
     display: flex;
     min-height: 70px;
     background-color: rgb(121, 99, 51);
@@ -24,6 +25,7 @@ header{
 }
 
 #salir{
+    color: aliceblue;
     margin-left: 60%; 
     width: 120px;
     height: 60px;
@@ -32,6 +34,7 @@ header{
     background-color: rgb(239, 192, 89);
 }
 #btnGuardar{
+    color: aliceblue;
     margin-left: 60%; 
     width: 120px;
     height: 60px;
@@ -52,7 +55,7 @@ nav > a:hover{
 
 
 
-.contenido {
+.contenido {    
     display: grid;
     border-color: 5px brown;
     grid-template-columns: repeat(2, 1fr);
@@ -64,12 +67,14 @@ nav > a:hover{
 
 
 .contenido1{
+    color: aliceblue;
     padding: 5%;
     background-color: rgb(121, 99, 51);
     width: 400px;
-    height: 600px;
+    height: 280px;
     margin-left: 10%;
     border-radius: 3%;
+    box-shadow: 0px 0px 30px rgb(30, 30, 31);
 
 }
 
@@ -83,24 +88,29 @@ nav > a:hover{
 .contenido2{
     display: flex;
     border: solid 3px rgb(121, 99, 51);
-
     width: 1000px;
     height: 650px;
     margin-right: 70px ;
     border-radius: 5%;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 30px rgb(30, 30, 31);
 }
 
-.circulo{
-background-image: url("../IMGs/pefil\ img.jpg");
-    height: 200px;
-    width: 200px;
+.foto{
+    background-image: url("../IMGs/pefil\ img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
     border-radius: 100%;
-    margin-left: 90px;
-    margin-top: 10px;
+    margin-left: 60px;
+    margin-top: 45px;
+    
 }
 
 
 footer{
+    color: aliceblue;
     display: flex;
     display: grid; 
     grid-template-columns: repeat(2, 1fr);
@@ -128,8 +138,8 @@ p{
 
 hr{
     display: flex;
-    border-width: 5px;
-    
+    background-color: black;
+    width: 400px;
 }
 
 table{
@@ -146,3 +156,32 @@ table{
     height: 70vh;
     overflow-y: scroll;
 }
+
+button:hover{
+    box-shadow:0px 0px 10px rgb(0,0,0,0.4);
+    transform: translateY(-9%);
+    }
+
+
+    
+.grid-layout{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 500px;
+    width: 1400px;
+    border-radius: 20px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px rgb(30, 30, 31);
+    padding: 20px;
+    margin-top: 4%;
+}
+
+#caja2{
+   margin-left: 100px;
+}
+

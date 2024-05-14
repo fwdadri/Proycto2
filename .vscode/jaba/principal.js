@@ -1,59 +1,64 @@
 const user = JSON.parse(localStorage.getItem('login')) || false
-// if (!user) { //para aque no entre si pone la direccion de la pagina en el navegador
-//     window.location.href = 'login.html'
-// }
-
 
 const salir = document.getElementById("salir")
 ///boton d salir
 salir.addEventListener('click', function() {
 
-    alert('bye')
+    alert('bye');
 
-    localStorage.removeItem('principal.html')
+    localStorage.removeItem('principal.html');
 
     window.location.href = "login.html" //devolever al login
 })
+/////////////////////////////////////////////////
 
+//let usuario = JSON.parse(localStorage.getItem('usuario'))
+//usuario.nombre  
+//console.log(usuario.nombre) 
+
+
+
+
+
+console.log(usuario.nombre)
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-
 let nombre = document.getElementById("nombre1");
-
 let direc = document.getElementById("src");
-
-
 let btn = document.getElementById("btnGuardar");
-
-
 let Guardado = [];
 
 btn.addEventListener('click', function () {
-    usuarioLoggeado= JSON.parse(localStorage.getItem("usuario"))
 
-    let data ={
-        nombre: nombre.value,
-        src: src.value,
-        correo: usuarioLoggeado.gmail
+    if (nombre.value != "" &&  src.value != "" ) {
+     usuarioLoggeado= JSON.parse(localStorage.getItem("usuario"))
+
+      let data ={
+         nombre: nombre.value,
+         src: src.value,
+         correo: usuarioLoggeado.gmail
+      }
+       
+       if (portafolios == null) {
+            usuarios= JSON.parse(localStorage.getItem("portafolios")) || [];//aqui se esta trayendo a la lista de usuarios y
+            portafolios.push(data)//se esta agregando
+
+            localStorage.setItem("crear",JSON.stringify(usuarios))////aqui se esta añadiendo al local storage
+            alert("Añadido correctamente");
+            
+         }else{
+            let encontrado = portafolios.find(key => key.gmail == gmail.value && key.nombre == src.nombre && key.src == src.value);
+
+            if (encontrado) {
+                Guardado = Array(localStorage.getItem("portafolios")) || [];
+                Guardado.push(JSON.stringify(data));
+
+                localStorage.setItem("portafolios", Guardado);
+                alert ("Ya esta creado");  
+            }         
+        }
     }
-    
-    Guardado = Array(localStorage.getItem("portafolios")) || []
-    Guardado.push(JSON.stringify(data))
-
-    localStorage.setItem("portafolios", Guardado);
-
-    get item del usuario
-    get item portafolio
-    crear nueva lista con los portafoios del usuario
-    comparar
-    la lista puede que sea un un objeto o un array 
-
-    sabado en la mañana 10-12
-    domingo despues de las 8 pm
-
-
-
-    //localStorage.setItem("usuarios",JSON.stringify(loGuardado))
-
+alert ("campos incompletos");
+ 
 });
