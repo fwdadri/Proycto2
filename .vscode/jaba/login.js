@@ -13,13 +13,17 @@ boton.addEventListener("click", function( ) {
         console.log(username.value + password.value)
         console.log(registro)
 
+
         let encontrado = registro.find(key => key.gmail == username.value && key.password == password.value) 
 //es un key, puede tener cualquier key como index que recorre y es el que encuentra lo que queremos
      if (encontrado) {              // el find es cmo un for que recorre una lista o array
 
-      localStorage.setItem("usuario",JSON.stringify(encontrado))
-       alert ("bienvenido");
-       window.location.href = "principal.html"
+        localStorage.setItem("usuario",JSON.stringify(encontrado))
+        alert ("bienvenido");
+        let nombre = document.getElementById("name");
+
+        nombre.innerHTML = usuario.nombre;
+        window.location.href = "principal.html"
            
         }else{
          alert ("contraseña o correo incorrecto");

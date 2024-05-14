@@ -4,9 +4,9 @@ const salir = document.getElementById("salir")
 ///boton d salir
 salir.addEventListener('click', function() {
 
-    alert('bye')
+    alert('bye');
 
-    localStorage.removeItem('principal.html')
+    localStorage.removeItem('principal.html');
 
     window.location.href = "login.html" //devolever al login
 })
@@ -16,9 +16,9 @@ salir.addEventListener('click', function() {
 //usuario.nombre  
 //console.log(usuario.nombre) 
 
-let name = document.getElementById("name");
 
-name.innerHTML = usuario.nombre
+
+
 
 console.log(usuario.nombre)
 
@@ -51,16 +51,13 @@ btn.addEventListener('click', function () {
             let encontrado = portafolios.find(key => key.gmail == gmail.value && key.nombre == src.nombre && key.src == src.value);
 
             if (encontrado) {
+                Guardado = Array(localStorage.getItem("portafolios")) || [];
+                Guardado.push(JSON.stringify(data));
 
-           Guardado = Array(localStorage.getItem("portafolios")) || []
-           Guardado.push(JSON.stringify(data))
-
-          localStorage.setItem("portafolios", Guardado);
-          alert ("Ya esta creado");  
+                localStorage.setItem("portafolios", Guardado);
+                alert ("Ya esta creado");  
             }         
-
         }
-
     }
 alert ("campos incompletos");
  
